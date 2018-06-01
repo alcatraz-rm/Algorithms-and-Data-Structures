@@ -6,7 +6,7 @@
   * [Нахождение наибольшего общего делителя](./numerical_algorithms/gcd.cpp)
   * [Возведение в степень](./numerical_algorithms/exponentiation.cpp)
   * [Нахождение простых множителей](./numerical_algorithms/prime_factors_find.cpp)
-  * [Нахождение простых элементов (решето Эратосфена)](./numerical_algorithms/sieve_of_erathosthenes.cpp)
+  * [Нахождение простых элементов (решето Эратосфена)](./numerical_algorithms/sieve_of_eratosthenes.cpp)
   * Проверка на простоту
   
 **Связные списки:**
