@@ -15,15 +15,7 @@ vector<int> find_factors(int number)
   }
 
   while(number % 2 == 0)
-  {
-      if (factors[key] != 2)
-      {
-        factors.push_back(2);
-        key = factors.size() - 1;
-      }
-
       number /= 2;
-  }
 
   i = 3;
   max_factor = sqrt(number);
