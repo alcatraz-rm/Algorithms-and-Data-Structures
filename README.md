@@ -5,7 +5,7 @@
 **[Численные алгоритмы:](./numerical_algorithms)**
   * [Нахождение наибольшего общего делителя](./numerical_algorithms/gcd.cpp)
   * [Возведение в степень](./numerical_algorithms/exponentiation.cpp)
-  * Нахождение простых множителей
+  * [Нахождение простых множителей](./numerical_algorithms/prime_factors_find.cpp)
   * Нахождение простых элементов
   * Проверка на простоту
   
