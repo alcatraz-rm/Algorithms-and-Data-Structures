@@ -129,13 +129,64 @@ public:
     delete_element_by_index(get_index_by_data(target));
   }
 
+  void clear()
+  {
+    element* tmp = top_limiter->next;
+    element* prev;
+
+    while(tmp)
+    {
+      prev = tmp;
+      tmp = tmp->next;
+      delete prev;
+    }
+
+    top_limiter->next = NULL;
+  }
+
+  void delete_all()
+  {
+    clear();
+    delete top_limiter;
+  }
+
+  void input()
+  {
+    cout<<"Enter all items in the list separated by enter/space: "<<endl;
+    element* tmp = top_limiter->next;
+
+    while(tmp)
+    {
+      cin>>tmp->data;
+      tmp = tmp->next;
+    }
+  }
+
+  void change_data_by_index(int index, int new_val)
+  {
+    if (index < 0 || index >= size())
+      return;
+
+    element* tmp_element = top_limiter->next;
+
+    while (index)
+    {
+      tmp_element = tmp_element->next;
+      index--;
+    }
+
+    tmp_element->data = new_val;
+  }
+
 };
 
 int main()
 {
   srand(time(0));
   list my_list(10);
+  my_list.input();
   my_list.print();
 
+  my_list.delete_all();
   return 0;
 }
