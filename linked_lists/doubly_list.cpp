@@ -244,16 +244,53 @@ public:
       add_sorted(values[i]);
   }
 
+  int get_max()
+  {
+    element* tmp_element = top_limiter->next;
+    int m = tmp_element->data; // max element
+
+    tmp_element = tmp_element->next;
+    while (tmp_element != lower_limiter)
+    {
+      if (tmp_element->data > m)
+        m = tmp_element->data;
+      tmp_element = tmp_element->next;
+    }
+
+    return m;
+  }
+
+  void selection_sort()
+  {
+    int list_size = size();
+    int value;
+    if (list_size == 0)
+      return;
+
+    list copy_of_list = copy();
+    clear();
+
+    while (list_size)
+    {
+      value = copy_of_list.get_max();
+      add(value);
+      copy_of_list.delete_element_by_data(value);
+      list_size--;
+    }
+
+    copy_of_list.delete_all();
+  }
+
 };
 
 int main()
 {
   srand(time(0));
-  list my_list(100);
-//  my_list.input();
+  list my_list(10);
   my_list.print();
 
-  my_list.insertion_sort();
+  my_list.selection_sort();
+
   my_list.print();
 
   my_list.delete_all();
