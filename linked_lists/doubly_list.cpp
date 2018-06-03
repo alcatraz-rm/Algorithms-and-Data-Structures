@@ -222,21 +222,40 @@ public:
     return new_list;
   }
 
+  void insertion_sort()
+  {
+    int list_size = size();
+    if (list_size == 0)
+      return;
+
+    int i;
+    int* values = new int [list_size];
+    element* tmp_element = top_limiter->next;
+
+    for (i = 0; i < list_size; i++)
+    {
+      values[i] = tmp_element->data;
+      tmp_element = tmp_element->next;
+    }
+
+    clear();
+
+    for (i = 0; i < list_size; i++)
+      add_sorted(values[i]);
+  }
+
 };
 
 int main()
 {
   srand(time(0));
-  list my_list(10);
-  my_list.input();
+  list my_list(100);
+//  my_list.input();
   my_list.print();
-  int data;
-  cout<<"Enter the data: "<<endl;
-  cin>>data;
-  cout<<endl;
 
-  my_list.add_sorted(data);
+  my_list.insertion_sort();
   my_list.print();
 
   my_list.delete_all();
-  return 0;}
+  return 0;
+}
