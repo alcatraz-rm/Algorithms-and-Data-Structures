@@ -10,11 +10,11 @@
   * [Проверка на простоту (тест простоты Ферма)](./numerical_algorithms/prime_check)
 
 **[Связные списки:](./linked_lists)**
-  * [Однонаправленные связные списки](./linked_lists/singly_list.cpp) (передвижение по списку, нахождение ячеек по данным и по индексу, использование ограничителей, добавление и удаление ячеек, изменение элемента по индексу, очистка)
-  * [Двунаправленные связные списки](./linked_lists/doubly_list.cpp) (передвижение по списку, нахождение ячеек по данным и по индексу, использование ограничителей, добавление и удаление ячеек, изменение элемента по индексу, очистка)
+  * [Однонаправленные связные списки](./linked_lists/singly_list.cpp) (передвижение по списку, нахождение ячеек по данным и по индексу, использование ограничителей, добавление и удаление ячеек, изменение элемента по индексу, очистка, получение максимума)
+  * [Двунаправленные связные списки](./linked_lists/doubly_list.cpp) (передвижение по списку, нахождение ячеек по данным и по индексу, использование ограничителей, добавление и удаление ячеек, изменение элемента по индексу, очистка, получение максимума)
   * Копирование связного списка ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L195), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L215))
   * Сортировка вставкой ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L205), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L225))
-  * Сортировка выбором
+  * Сортировка выбором ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L244), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L263))
 
 **Массивы:**
   * Одномерные массивы (нахождение элементов, нахождение минимальной, средней и максимальной величин, вставка и удаление элементов)
