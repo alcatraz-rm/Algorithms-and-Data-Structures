@@ -67,6 +67,8 @@ public:
       cout<<tmp_element->data<<endl;
       tmp_element = tmp_element->next;
     }
+
+    cout<<endl;
   }
 
   int get_index_by_data(int target) //this method returns element by data
@@ -195,6 +197,16 @@ public:
     tmp_element->data = new_val;
   }
 
+  list copy()
+  {
+    int list_size = size();
+    list new_list(list_size);
+    for (int i = 0; i < list_size; i++)
+      new_list.change_data_by_index(i, *get_data_by_index(i));
+
+    return new_list;
+  }
+
 };
 
 int main()
@@ -203,7 +215,7 @@ int main()
   list my_list(10);
   my_list.input();
   my_list.print();
-
+  
   my_list.delete_all();
   return 0;
 }
