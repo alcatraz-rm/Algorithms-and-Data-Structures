@@ -1,4 +1,4 @@
-Данная директория содержит реализацию [односвязного](./linked_lists/singly_list.cpp) и [двусвязного](./linked_lists/doubly_list.cpp) списков. При реализации для 
+Данная директория содержит реализацию [односвязного](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp) и [двусвязного](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp) списков. При реализации для 
 удобства использовались ограничители (в односвязном списке используется только верхний ограничитель, в двусвязном и верхний, и нижний).
 
 Были реализованы следующие методы для каждого вида списка:
