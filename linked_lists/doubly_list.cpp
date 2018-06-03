@@ -118,6 +118,21 @@ public:
 
   }
 
+  void add_sorted(int data)
+  {
+    element* tmp_element = top_limiter;
+    element* new_element = new element;
+    new_element->data = data;
+
+    while (tmp_element->next != lower_limiter && tmp_element->next->data < data)
+      tmp_element = tmp_element->next;
+
+    new_element->next = tmp_element->next;
+    new_element->prev = tmp_element;
+    tmp_element->next = new_element;
+    new_element->next->prev = new_element;
+  }
+
   void delete_element_by_index(int index)
   {
     if (index < 0 || index >= size())
@@ -215,7 +230,13 @@ int main()
   list my_list(10);
   my_list.input();
   my_list.print();
-  
+  int data;
+  cout<<"Enter the data: "<<endl;
+  cin>>data;
+  cout<<endl;
+
+  my_list.add_sorted(data);
+  my_list.print();
+
   my_list.delete_all();
-  return 0;
-}
+  return 0;}
