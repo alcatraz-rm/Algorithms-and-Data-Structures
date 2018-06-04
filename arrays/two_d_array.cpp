@@ -34,11 +34,63 @@ void print_array(vector<vector<int> > array)
   }
 }
 
+pair <int, int> get_indexes(vector<vector<int> > array, int target)
+{
+  int i, j;
+  for (i = 0; i < array.size(); i++)
+    for (j = 0; j < array[i].size(); j++)
+      if (array[i][j] == target)
+          return make_pair(i, j);
+
+  return make_pair(-1, -1);
+}
+
+int get_max(vector<vector<int> > array)
+{
+  int m = array[0][0], i, j;
+
+  for (i = 0; i < array.size(); i++)
+    for (j = 0; j < array[i].size(); j++)
+      if (array[i][j] > m)
+        m = array[i][j];
+
+  return m;
+}
+
+int get_min(vector<vector<int> > array)
+{
+  int m = array[0][0], i, j;
+
+  for (i = 0; i < array.size(); i++)
+    for (j = 0; j < array[i].size(); j++)
+      if (array[i][j] < m)
+        m = array[i][j];
+
+  return m;
+}
+
+double get_average(vector<vector<int> > array)
+{
+  double result = 0;
+  int i, j;
+
+  for (i = 0; i < array.size(); i++)
+    for (j = 0; j < array[i].size(); j++)
+      result += array[i][j];
+
+  return result / (array.size() * array[0].size());
+}
+
 int main()
 {
+  srand(time(0));
   int i, j, size_y = 10, size_x = 10;
   vector<vector<int> > array = array_init(size_y, size_x);
   print_array(array);
+
+  cout<<get_max(array)<<endl;
+  cout<<get_min(array)<<endl;
+  cout<<get_average(array)<<endl;
 
   return 0;
 }
