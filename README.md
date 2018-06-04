@@ -15,6 +15,7 @@
   * Копирование связного списка ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L195), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L215))
   * Сортировка вставкой ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L205), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L225))
   * Сортировка выбором ([singly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/singly_list.cpp#L244), [doubly](https://github.com/GermanYakimov/Algorithms-and-Data-Structures/blob/master/linked_lists/doubly_list.cpp#L263))
+  * Поиск цикла (помеченные ячейки, метод кролика и черепахи, повторная трассировка списка)
 
 **[Массивы:](./arrays)**
   * [Одномерные массивы](./arrays/linear_array.cpp) (линейный поиск, нахождение минимальной, средней и максимальной величин, вставка и удаление элементов)
