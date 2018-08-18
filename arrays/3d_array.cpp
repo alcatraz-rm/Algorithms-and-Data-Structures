@@ -47,6 +47,23 @@ void print_array(int*** arr, int size)
   }
 }
 
+void delete_array(int*** arr, int size)
+{
+  int i, j;
+
+  for (i = 0; i < size; i++)
+  {
+    for (j = 0; j < size; j++)
+    {
+      delete arr[i][j];
+    }
+
+    delete arr[i];
+  }
+
+  delete arr;
+}
+
 int main()
 {
   srand(time(0));
@@ -54,6 +71,7 @@ int main()
 
   int*** arr = array_init(size);
   print_array(arr, size);
+  delete_array(arr, size);
 
   return 0;
 }
