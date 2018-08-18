@@ -35,11 +35,24 @@ void print_array(int** arr, int size)
   }
 }
 
+void delete_array(int** arr, int size)
+{
+  int i, j;
+
+  for (i = 0; i < size; i++)
+  {
+    delete arr[i];
+  }
+
+  delete arr;
+}
+
 int main()
 {
   int size = 10;
   int** arr = array_init(size);
   print_array(arr, size);
+  delete_array(arr, size);
 
   return 0;
 }
