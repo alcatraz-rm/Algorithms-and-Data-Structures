@@ -49,6 +49,7 @@ void print_array(int*** arr, int size)
 
 int main()
 {
+  srand(time(0));
   int size = 10;
 
   int*** arr = array_init(size);
