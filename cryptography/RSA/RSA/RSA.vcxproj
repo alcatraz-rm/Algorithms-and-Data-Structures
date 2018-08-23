@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{BE844FA0-11C9-486A-A905-BF6B1A57DB0E}</ProjectGuid>
+    <ProjectGuid>{CB412EE4-3A89-4C7A-BF79-E9C635AC2465}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>StackList</RootNamespace>
+    <RootNamespace>RSA</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,8 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="StackList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
