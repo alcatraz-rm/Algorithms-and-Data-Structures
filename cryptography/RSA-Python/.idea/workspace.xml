@@ -14,8 +14,27 @@
       <file leaf-file-name="source.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1176">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="-236">
+              <caret line="113" column="67" lean-forward="true" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1833" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="117" selection-start-column="117" selection-end-column="117" />
             </state>
           </provider>
         </entry>
@@ -33,6 +52,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/message.txt" />
         <option value="$PROJECT_DIR$/source.py" />
       </list>
     </option>
@@ -118,15 +138,15 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -140,11 +160,34 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="117" selection-start-column="117" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1833" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1176">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="-236">
+          <caret line="113" column="67" lean-forward="true" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
