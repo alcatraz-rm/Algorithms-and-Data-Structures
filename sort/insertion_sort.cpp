@@ -19,7 +19,7 @@ int main()
     {
         index = i;
 
-        while (index - 1 >= 0 and numbers[index] < numbers[index - 1])
+        while (index >= 1 and numbers[index] < numbers[index - 1])
         {
             swap(numbers[index], numbers[index - 1]);
             index--;
