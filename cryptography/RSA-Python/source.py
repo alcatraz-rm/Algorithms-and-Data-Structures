@@ -103,7 +103,7 @@ class Decoder:
             self.secret_key += 1
 
     def encode(self, message):
-        encoded_message = ';\n'.join([str(ord(char) ** self.exponent % self.module) for char in message])
+        encoded_message = '; '.join([str(ord(char) ** self.exponent % self.module) for char in message])
 
         with open('result.txt', 'w', encoding='utf-8')as file:
             file.write(encoded_message)
@@ -111,7 +111,7 @@ class Decoder:
         return encoded_message
 
     def decode(self, encoded_message):
-        encoded_message = [int(i) for i in encoded_message.split(';\n')]
+        encoded_message = [int(i) for i in encoded_message.split('; ')]
 
         return ''.join([chr(i ** self.secret_key % self.module) for i in encoded_message])
 
