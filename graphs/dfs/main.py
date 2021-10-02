@@ -1,16 +1,33 @@
-# This is a sample Python script.
+from pprint import pprint
 
-# Press <no shortcut> to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+import numpy as np
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def dfs(v, visited, matrix):
+    if not visited:
+        visited = set()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    visited.add(v)
+
+    for u, is_adjacent in enumerate(matrix[v]):
+        if is_adjacent and u not in visited:
+            visited = dfs(u, visited, matrix)
+
+    return visited
+
+
+n = int(input("nodes: "))
+matrix = np.array([np.array(list(map(int, input().split()))) for _ in range(n)])
+
+# nodes = list(range(0, n))
+not_visited = list(range(0, n))
+result = 0
+
+while not_visited:
+    v = not_visited[0]
+    component = dfs(v, set(), matrix)
+    print(component)
+    not_visited = [node for node in not_visited if node not in component]
+    result += 1
+
+print('total components number:', result)
