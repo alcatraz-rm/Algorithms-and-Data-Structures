@@ -4,7 +4,6 @@ import numpy as np
 
 
 def dfs(v, visited, matrix):
-    visited = set() if not visited else visited
     visited.add(v)
 
     for u, is_adjacent in enumerate(matrix[v]):

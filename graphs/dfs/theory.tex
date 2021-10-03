@@ -1,0 +1,85 @@
+\documentclass[a4paper,20pt]{article}
+\usepackage[left=2cm,right=2cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox,fancyhdr}
+\usepackage{euscript,mathrsfs}
+\usepackage{float}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\arcctg}{arcctg}
+\DeclareMathOperator{\sh}{sh}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\cth}{cth}
+\DeclareMathOperator{\asinh}{asinh}
+\DeclareMathOperator{\acosh}{acosh}
+\DeclareMathOperator{\atanh}{atanh}
+\DeclareMathOperator{\acoth}{acoth}
+\DeclareMathOperator{\asech}{asech}
+\DeclareMathOperator{\acsch}{acsch}
+\DeclareMathOperator{\atan}{atan}
+\DeclareMathOperator{\acot}{acot}
+\DeclareMathOperator{\acos}{acos}
+\DeclareMathOperator{\asin}{asin}
+\DeclareMathOperator{\asec}{asec}
+\DeclareMathOperator{\acsc}{acsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{icomma}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\DeclareUnicodeCharacter{2212}{-}
+\newtheorem{definition}{Definition}
+
+\numberwithin{equation}{subsubsection}
+\numberwithin{definition}{subsubsection}
+
+\fancyhead[R]{Якимов Г.В., гр. 19122. Тема №4: Компоненты связности}
+\fancyhead[L]{}
+\fancyhead[C]{}
+
+\fancyfoot[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+
+\begin{document}
+	\pagestyle{fancy}
+
+	\noindent\textbf{Тема:} Компоненты связности (найти количество компонент связности графа, вывести компоненты списком вершин согласно нумерации в матрице смежности).
+	\newline
+
+	\noindent Для начала рассмотрим алгоритм $DFS$ поиска в глубину, на котором базируется алгоритм решения задачи. Существует множество вариантов алгоритма $DFS$, в зависимости от задачи: формирование леса поиска по исходному графу, расстановка меток времени и т.д. В данном случае нам нужно в процессе обхода графа, начав с определенной вершины, запомнить все вершины, до которых дойдет алгоритм, тем самым будет сформирована компонента связности этой вершины.
+	$DFS$ использует стек для хранения вершин в процессе обхода, в данном случае будем использовать стек вызовов для этой цели, то есть алгоритм $DFS$ будет рекурсивным. Таким образом, функцию $DFS$ можно представить в виде следующих шагов:
+	\newline
+	\newline
+	$DFS(v, visited, matrix)$
+	\newline
+	\newline
+	\{\textbf{In:} вершина $v \in V(G)$; множество $visited$ посещенных вершин (при первом запуске пустое); неориентированный граф $G$, заданный матрицей смежности $matrix$\}
+	\newline
+	\{\textbf{Out:} список всех вершин, до которых дошел алгоритм в процессе обхода\}
+
+	\begin{enumerate}
+		\item[(1)] Добавляем вершину $v$ в множество $visited$;
+		\item[(2)] С помощью матрицы смежности обходим все вершины, смежные с $v$;
+		\item[(3)] Для очередной вершины $u$, смежной с $v$ и не лежащей в множестве $visited$, запускаем: $visited = DFS(u, visited, matrix)$;
+		\item[(4)] Возвращаем множество $visited$ всех посещенных в процессе обхода вершин.
+	\end{enumerate}
+
+	\noindent\textbf{Описание алгоритма:} Пусть $Q$ - множество всех вершин графа $G$ и $result$ - количество компонент связности (инициализируется нулем). Далее:
+	\begin{enumerate}
+		\item[(1)] Извлекаем из $Q$ вершину $v = Q[0]$. Запускаем $component = DFS(v, \{\}, matrix)$. Функция $DFS$ полностью определяет компоненту связности $component$, в которой находится вершина $v$;
+		\item[(2)] $component$ выводится на экран;
+		\item[(3)] Из $Q$ удаляются все вершины, которые находятся в $component$;
+		\item[(4)] Инкрементируем переменную $result$;
+		\item[(5)] Если $Q$ не пусто, то возвращаемся к шагу (1). В противном случае выводим $result$ и завершаем работу.
+	\end{enumerate}
+	
+\end{document}
+
