@@ -13,18 +13,24 @@ def dfs(v, visited, matrix):
     return visited
 
 
+def factorize(Q, matrix):
+    # not_visited = list(range(0, n))
+    result = []
+
+    while Q:
+        v = Q[0]
+        component = dfs(v, set(), matrix)
+        result.append(component)
+
+        Q = [node for node in Q if node not in component]
+
+    return result
+
 n = int(input("nodes: "))
 matrix = np.array([np.array(list(map(int, input().split()))) for _ in range(n)])
+result = factorize(list(range(0, n)), matrix)
 
-not_visited = list(range(0, n))
-result = 0
-
-while not_visited:
-    v = not_visited[0]
-    component = dfs(v, set(), matrix)
+for component in result:
     print(component)
 
-    not_visited = [node for node in not_visited if node not in component]
-    result += 1
-
-print('total components number:', result)
+print('total components number:', len(result))
