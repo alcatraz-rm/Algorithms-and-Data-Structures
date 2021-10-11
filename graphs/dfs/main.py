@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import numpy as np
 
 
@@ -14,7 +12,6 @@ def dfs(v, visited, matrix):
 
 
 def factorize(Q, matrix):
-    # not_visited = list(range(0, n))
     result = []
 
     while Q:
