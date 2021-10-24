@@ -1,4 +1,6 @@
 import numpy as np
+import scipy
+from scipy.sparse import csgraph
 
 
 def dfs(v, visited, matrix):
@@ -11,7 +13,7 @@ def dfs(v, visited, matrix):
     return visited
 
 
-def factorize(Q, matrix):
+def connected_components(Q, matrix):
     result = []
 
     while Q:
@@ -23,11 +25,14 @@ def factorize(Q, matrix):
 
     return result
 
-n = int(input("nodes: "))
+
+n = int(input("nodes number: "))
 matrix = np.array([np.array(list(map(int, input().split()))) for _ in range(n)])
-result = factorize(list(range(0, n)), matrix)
+result = connected_components(list(range(0, n)), matrix)
+
+# scipy method just for checking
+# print(csgraph.connected_components(matrix))
 
 for component in result:
     print(component)
-
 print('total components number:', len(result))
